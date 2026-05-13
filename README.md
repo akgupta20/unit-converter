@@ -1,6 +1,6 @@
 # Unit Converter
 
-** Live Demo:** [https://sky-unit-converter.vercel.app/](https://sky-unit-converter.vercel.app/)
+**Live Demo:** [https://sky-unit-converter.vercel.app/](https://sky-unit-converter.vercel.app/)
 
 A fast, simple, and reliable Unit Converter app built with React and Tailwind CSS. It is designed to be easy to use, easy to maintain, and smart about handling data.
 
