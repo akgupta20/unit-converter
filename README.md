@@ -1,16 +1,34 @@
-# React + Vite
+# Unit Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+** Live Demo:** [https://sky-unit-converter.vercel.app/](https://sky-unit-converter.vercel.app/)
 
-Currently, two official plugins are available:
+A fast, simple, and reliable Unit Converter app built with React and Tailwind CSS. It is designed to be easy to use, easy to maintain, and smart about handling data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## How We Built It
 
-## React Compiler
+### 1. Clean Code (Separation of Logic and UI)
+We kept the math and the design completely separate.
+- **The Math (`conversionEngine.js`)**: All the formulas and numbers live here, with no UI code mixed in. This makes it easy to test and bug-free.
+- **The UI**: The React components only focus on looking good and taking user input.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Easy to Add New Things (Scalable)
+Want to add a new unit like "Yards" or a whole new category like "Speed"? You just add one line to the central config list. The app automatically updates the dropdowns and menus for you.
 
-## Expanding the ESLint configuration
+### 3. Smart Error Handling (Edge Cases)
+The app stops bad inputs before they break things:
+- **No Impossible Numbers**: It won't let you enter a negative length or weight. It also stops temperatures from going below absolute zero.
+- **Clean Decimals**: It rounds long, messy decimals so they are easy to read.
+- **Handles Empty Inputs**: Deleting numbers won't cause annoying "NaN" (Not a Number) errors.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 4. Great User Experience (UI Decisions)
+We made sure the app feels smooth and premium:
+- **Live Updates**: Type in the "From" or "To" box, and the other box updates instantly.
+- **Modern Look**: It uses smooth animations, clean spacing, and a modern "glass" design.
+- **Mobile Friendly & Accessible**: It works great on phones and is easy for everyone to read and use.
+- **Handy Tools**: Includes one-click buttons to swap units or copy your results.
+
+## Tech Stack
+- React 19
+- Vite
+- Tailwind CSS (v4)
+- shadcn/ui
